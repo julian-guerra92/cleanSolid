@@ -63,23 +63,12 @@
 
     const productService = new ProductService;
     const mailer = new Mailer;
-
-
     const productBloc = new ProductBloc(productService, mailer);
     const cartBloc = new CartBloc;
-
 
     productBloc.loadProduct(10);
     productBloc.saveProduct({ id: 10, name: 'OLED TV' });
     productBloc.notifyClients();
     cartBloc.addToCart(10);
-    // productBloc.onAddToCart(10);
-
-
-
-
-
-
-
 
 })();
